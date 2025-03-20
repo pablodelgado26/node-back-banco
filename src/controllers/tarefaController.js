@@ -37,6 +37,8 @@ class TarefaController {
       if (!tarefaAtualizada) {
         return res.status(404).json({ erro: "Tarefa não encontrada" });
       }
+
+      res.json(tarefaAtualizada)
     } catch (error) {
       console.error(error);
       res.status(500).json({ erro: "Erro ao atualizar tarefa" });
